@@ -183,6 +183,15 @@ However be aware, the playground has sometimes some refresh issues so the progra
 
 ![playground](./images/playground.png)
 
+### Validation
+
+Not everything about your language can be specified in the grammar.
+Langium lets you write custom validation rules in the `src/language/<your-language>-validator.ts` file.
+A validation rule is a function attached to a concept of your AST: Langium runs it on every matching node of the program, and it can report errors or warnings that are displayed directly in the editor.
+You can find how to write and register them in the [Langium documentation](https://langium.org/docs/learn/workflow/create_validations/).
+
+We expect you to write **2 or 3 validation rules** relevant to your language.
+You do not need to write a complete type checker here. Simple validations can be a warning when a variable or function name does not follow a naming convention (camelCase/snake_case) or an error when a function is called with the wrong number of arguments.
 
 ## Part 3 - Executable modeling
 
