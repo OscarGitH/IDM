@@ -113,7 +113,7 @@ valeur: Expression [1]</panel_attributes>
     </coordinates>
     <panel_attributes>If
 --
-cond: Expression [1]</panel_attributes>
+cond: BoolExpression [1]</panel_attributes>
     <additional_attributes></additional_attributes>
   </element>
   <element>
@@ -126,7 +126,7 @@ cond: Expression [1]</panel_attributes>
     </coordinates>
     <panel_attributes>Loop
 --
-cond: Expression [1]</panel_attributes>
+cond: BoolExpression [1]</panel_attributes>
     <additional_attributes></additional_attributes>
   </element>
   <element>
@@ -349,7 +349,7 @@ operand: Expression [1]</panel_attributes>
     <panel_attributes>LogicUnaryExpr
 --
 op: LogicUnaryOp
-operand: Expression [1]</panel_attributes>
+operand: BoolExpression [1]</panel_attributes>
     <additional_attributes></additional_attributes>
   </element>
   <element>
@@ -378,8 +378,8 @@ right: Expression [1]</panel_attributes>
     <panel_attributes>LogicBinaryExpr
 --
 op: LogicBinaryOp
-left: Expression [1]
-right: Expression [1]</panel_attributes>
+left: BoolExpression [1]
+right: BoolExpression [1]</panel_attributes>
     <additional_attributes></additional_attributes>
   </element>
   <element>

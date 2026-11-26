@@ -38,12 +38,12 @@
 - valeur: Expression [1] (containment)
 
 ### If (EClass) extends Instruction
-- cond: Expression [1] (containment)
+- cond: BoolExpression [1] (containment)
 - ifBloc: Bloc [1] (containment)
 - elseBloc: Bloc [0..1] (containment)
 
 ### Loop (EClass) extends Instruction
-- cond: Expression [1] (containment)
+- cond: BoolExpression [1] (containment)
 - bloc: Bloc [1] (containment)
 
 ### Return (EClass) extends Instruction
@@ -64,7 +64,7 @@
 - distance: Expression [1] (containment)
 - unit: UnitDist
 
-### Rotation (EClass) extends Action
+### Clock (EClass) extends Action
 - angle: Expression [1] (containment)
 - unit: UnitDeg
 
@@ -76,12 +76,12 @@
 ### GetDistance (EClass) extends Expression
 - unit: UnitDist
 
-### Clock (EClass) extends Expression
-
-
 ## Expressions
 
 ### Expression (EClass, abstract)
+
+// expressions dont le résultat est un booléen (utilisables comme condition de If / Loop)
+### BoolExpression (EClass, interface) extends Expression
 
 ### VarRef (EClass) extends Expression
 - variable: Variable [1] (référence)
@@ -95,7 +95,7 @@
 ### DoubleLiteral (EClass) extends Expression
 - valeur: EDouble
 
-### BoolLiteral (EClass) extends Expression
+### BoolLiteral (EClass) extends BoolExpression
 - valeur: EBoolean
 
 ### StringLiteral (EClass) extends Expression
@@ -105,21 +105,21 @@
 - op: ArithUnaryOp
 - operand: Expression [1] (containment)
 
-### LogicUnaryExpr (EClass) extends Expression
+### LogicUnaryExpr (EClass) extends BoolExpression
 - op: LogicUnaryOp
-- operand: Expression [1] (containment)
+- operand: BoolExpression [1] (containment)
 
 ### ArithBinaryExpr (EClass) extends Expression
 - op: ArithBinaryOp
 - left: Expression [1] (containment)
 - right: Expression [1] (containment)
 
-### LogicBinaryExpr (EClass) extends Expression
+### LogicBinaryExpr (EClass) extends BoolExpression
 - op: LogicBinaryOp
-- left: Expression [1] (containment)
-- right: Expression [1] (containment)
+- left: BoolExpression [1] (containment)
+- right: BoolExpression [1] (containment)
 
-### CompareExpr (EClass) extends Expression
+### CompareExpr (EClass) extends BoolExpression
 - op: CompareOp
 - left: Expression [1] (containment)
 - right: Expression [1] (containment)
