@@ -5,7 +5,8 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:robot="http://www.example.org/robot">
   <fonctions
-      nom="entry">
+      nom="entry"
+      typeRet="VOID">
     <bloc>
       <instrs
           xsi:type="robot:SetSpeed"
@@ -47,7 +48,70 @@
                   valeur="1"/>
             </valeur>
           </instrs>
+          <instrs
+              xsi:type="robot:Appel"
+              fonction="//@fonctions.1"/>
         </bloc>
+      </instrs>
+    </bloc>
+  </fonctions>
+  <fonctions
+      nom="square"
+      typeRet="VOID">
+    <bloc>
+      <instrs
+          xsi:type="robot:Deplacement">
+        <distance
+            xsi:type="robot:IntLiteral"
+            valeur="30"/>
+      </instrs>
+      <instrs
+          xsi:type="robot:Clock"
+          unit="DEG">
+        <angle
+            xsi:type="robot:IntLiteral"
+            valeur="90"/>
+      </instrs>
+      <instrs
+          xsi:type="robot:Deplacement"
+          unit="MM">
+        <distance
+            xsi:type="robot:IntLiteral"
+            valeur="300"/>
+      </instrs>
+      <instrs
+          xsi:type="robot:Clock"
+          unit="DEG">
+        <angle
+            xsi:type="robot:IntLiteral"
+            valeur="90"/>
+      </instrs>
+      <instrs
+          xsi:type="robot:Deplacement">
+        <distance
+            xsi:type="robot:IntLiteral"
+            valeur="30"/>
+      </instrs>
+      <instrs
+          xsi:type="robot:Clock"
+          unit="DEG">
+        <angle
+            xsi:type="robot:IntLiteral"
+            valeur="90"/>
+      </instrs>
+      <instrs
+          xsi:type="robot:Deplacement"
+          unit="MM">
+        <distance
+            xsi:type="robot:IntLiteral"
+            valeur="300"/>
+      </instrs>
+      <instrs
+          xsi:type="robot:Clock"
+          unit="DEG">
+        <angle
+            xsi:type="robot:IntLiteral"
+            valeur="90"/>
       </instrs>
     </bloc>
   </fonctions>

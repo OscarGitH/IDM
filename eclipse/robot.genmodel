@@ -100,9 +100,9 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference robot.ecore#//Deplacement/distance"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute robot.ecore#//Deplacement/unit"/>
     </genClasses>
-    <genClasses ecoreClass="robot.ecore#//Rotation">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference robot.ecore#//Rotation/angle"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute robot.ecore#//Rotation/unit"/>
+    <genClasses ecoreClass="robot.ecore#//Clock">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference robot.ecore#//Clock/angle"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute robot.ecore#//Clock/unit"/>
     </genClasses>
     <genClasses ecoreClass="robot.ecore#//SetSpeed">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference robot.ecore#//SetSpeed/vitesse"/>
@@ -113,7 +113,6 @@
     <genClasses ecoreClass="robot.ecore#//GetDistance">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute robot.ecore#//GetDistance/unit"/>
     </genClasses>
-    <genClasses ecoreClass="robot.ecore#//Clock"/>
     <genClasses ecoreClass="robot.ecore#//VarRef">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference robot.ecore#//VarRef/variable"/>
     </genClasses>
