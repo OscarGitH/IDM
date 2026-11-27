@@ -3,7 +3,8 @@
     xmi:version="2.0"
     xmlns:xmi="http://www.omg.org/XMI"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:robot="http://www.example.org/robot">
+    xmlns:robot="http://www.example.org/robot"
+    xsi:schemaLocation="http://www.example.org/robot robot.ecore">
   <fonctions
       nom="square"
       typeRet="VOID">
